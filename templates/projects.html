@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block head %}
+  <title>Rishav Saha - Projects</title>
+{% endblock %}
+
+{% block body %}
+<div class="page-style">
+  <p class="page-tag">Projects</p>
+  <br>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col col-lg-8 col-md-8 offset-md-2 offset-lg-2 col-sm-12 col-12">
+        <div class="project-container">
+          <ul>
+            <li>
+              IOT fire monitoring dashboard
+              <ul>
+                <li>Frontend framework: ReactJS</li>
+                <li>Database: Google Firestore (realtime database)</li>
+                <li>Hardware equiments: NodeMCU, gas sensor, temperature & humidity sensor, servo motors</li>
+              </ul>
+            </li>
+
+            <li>Sentiment analysis of e-commerce product review</li>
+            <ul>
+              <li>Used box-model algorithm and Logistic regression </li>
+              <li>Can classify product reviews as Positive, Negative or Neutral</li>
+            </ul>
+
+            <li>Image classification model using OpenCV and TensorFlow (can classify images of Cats & Dogs)</li>
+
+            <li>Line follower robot made with Arduino</li>
+            <ul>
+              <li>Follows black line over white surface and vice-versa</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

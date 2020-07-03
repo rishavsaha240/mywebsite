@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block head %}
+  <title>Rishav Saha - Contact me</title>
+{% endblock %}
+
+{% block body %}
+<div class="page-style">
+  <p class="page-tag">Want to talk with me?</p>
+  <p class="contact-me-subtitle">Kindly fill up the form or join me on <a href="https://www.linkedin.com/in/rishav-saha-04149a137/" target="_blank"><img src="../static/assets/linkedin_logo.png"> LinkedIN</a></p>
+  <div class="container">
+    <form action="/contactme" method="POST">
+      <div class="form-group">
+        <input type="text" placeholder="Your name" id="name" name="name" class="form-control name-email" required>
+      </div>
+      <div class="form-group">
+        <input type="email" placeholder="Your email-id" id="email" name="email" class="form-control name-email" required>
+      </div>
+      <div class="form-group">
+        <textarea placeholder="Your message" rows="10" id="message" name="message" class="form-control message" minlength="30" required></textarea>
+      </div>
+      <input type="submit" value = "Send message" id = "button" class="mt-4 btn btn-light">
+    </form>
+  </div>
+</div>
+{% endblock %}

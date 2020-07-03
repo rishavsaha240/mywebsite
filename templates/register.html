@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block head %}
+  <title>Rishav Saha - Admin registration</title>
+{% endblock %}
+
+{% block body %}
+<div class="page-style">
+  <p class="page-tag">Admin registration</p>
+  <div class="container">
+    <form action="/admin/dontcomehere", method="POST">
+      <div class="form-group">
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter emailID" required>
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password" required>
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" id="re-password" name="re-password" placeholder="Re-enter password" required>
+      </div>
+      <button type="submit" class="btn btn-warning">Register</button>
+    </form>
+  </div>
+{% endblock %}

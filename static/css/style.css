@@ -1,0 +1,390 @@
+/* Base  */
+.loader_bg {
+  position: fixed;
+  z-index: 9999;
+  background: rgb(0, 0, 0);
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+}
+
+.loader {
+  border: 0 solid transparent;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader:before, .loader:after {
+  content: '';
+  border: 1em solid #FFCD32;
+  border-radius: 50%;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: loader 2s linear infinite;
+  opacity: 0;
+}
+
+.loader:before {
+  animation-delay: .5s;
+}
+
+@keyframes loader {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  background-image: linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)), url("../assets/bg_image.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  max-width: 100vw;
+  background-attachment: fixed;
+}
+
+.navbar .mylogo {
+  width: 4.5rem;
+}
+
+.navbar .navbar-nav {
+  text-align: right;
+}
+
+.navbar .container .navbar-collapse .navbar-nav .nav-item a {
+  padding: 0 15px;
+}
+
+.navbar .container .navbar-collapse .navbar-nav .nav-item a:hover {
+  border-bottom: 2px solid #FFCD32;
+}
+
+.content {
+  position: absolute;
+  max-width: 99vw;
+  width: 100%;
+  margin-top: 70px;
+  padding: 0 50px;
+}
+
+/* -----------------Universal----------------- */
+
+.page-style {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.page-tag {
+  color: #ffffff;
+  font-size: 1.7rem;
+  letter-spacing: 0.3rem;
+}
+
+/* -----------------Home page----------------- */
+
+.home-page-cont {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 35rem;
+}
+
+.intro-text {
+  font-size: 5rem;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+}
+
+.name {
+  font-weight: 500;
+  color: #FFCD32;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: rgb(212, 212, 212);
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+  text-align: center;
+}
+
+/* -----------------About me page----------------- */
+
+.about-me-container {
+  padding-top: 4rem;
+}
+
+.about-me-tag {
+  font-size: 2.5rem;
+  color: #ffffff;
+  letter-spacing: 0.3rem;
+  font-weight: 500;
+}
+
+.about-me-text {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.highlight {
+  font-weight: 600;
+  color: #FFCD32;
+  font-size: 1.5rem;
+}
+
+.under-line {
+  text-decoration: underline;
+  text-decoration-color: #FFCD32;
+}
+
+.about-me-container .timeline p, ul li {
+  color: white;
+  font-weight: 300;
+}
+
+.about-me-container .timeline ul li {
+  letter-spacing: 0.1rem;
+}
+
+.timeline {
+  color: white;
+}
+
+.timeline .text {
+  font-size: 1.8rem;
+  text-decoration: underline;
+  text-decoration-color: #FFCD32;
+}
+
+.timeline ul {
+  list-style-type: none;
+}
+
+.internal-list {
+  margin-left: 1rem;
+}
+
+.timeline .tags {
+  font-weight: 350;
+  font-size: 1.1rem;
+}
+/* -----------------Contact me page----------------- */
+
+.page-style {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.page-tag {
+  color: #ffffff;
+  font-size: 1.7rem;
+  letter-spacing: 0.3rem;
+}
+
+.contact-me-subtitle {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  padding-bottom: 2rem;
+}
+
+.contact-me-subtitle img {
+  width: 2rem;
+}
+
+.contact-me-subtitle a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.contact-me-subtitle a:hover{
+  color: #FFCD32;
+}
+
+.name-email {
+  border-radius: 5px;
+  padding: 5px;
+  opacity: 80%;
+}
+
+.message {
+  padding: 5px;
+  opacity: 80%;
+}
+
+/* -----------------Skills page----------------- */
+.skills .skill-container {
+  min-height: 18rem;
+  border: 0.5px solid #FFCD32;
+  margin-bottom: 1.5rem;
+}
+
+.skills .skill-tag {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 450;
+  letter-spacing: 0.2rem;
+  border-bottom: 0.5px solid #FFCD32;
+}
+
+.skills .list ul {
+  text-align: left;
+  padding-left: 3rem;
+  font-size: 1.3rem;
+  letter-spacing: 0.2rem;
+  line-height: 2rem;
+}
+
+.skills .list ul li {
+  font-weight: 350;
+}
+
+/* -----------------Project page----------------- */
+
+.project-container {
+  min-height: 15rem;
+  border: 0.5px solid #FFCD32;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+}
+
+.project-container ul {
+  text-align: left;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.1rem;
+  line-height: 2rem;
+}
+
+/* -----------------Messages page----------------- */
+.msg-tag {
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-align: left;
+  letter-spacing: 0.1rem;
+  font-weight: 350;
+}
+
+.msg-container {
+  border: 1px solid #FFCD32;
+  color: white;
+  text-align: left;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 350;
+  letter-spacing: 0.05rem;
+  word-wrap: break-word;
+}
+
+.msg-read {
+  float: right;
+}
+
+.msg-read .read {
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  cursor: none;
+}
+
+/* -----------------Media queries----------------- */
+
+@media (max-width: 991px) {
+  .navbar .container .navbar-collapse .navbar-nav {
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    text-align: center;
+  }
+
+  .navbar .container .navbar-collapse .navbar-nav .nav-item a {
+    padding: 10px 0px;
+  }
+
+  .navbar .container .navbar-collapse .navbar-nav .nav-item a:hover {
+    border-bottom: 1px solid #FFCD32;
+  }
+}
+
+@media (max-width: 500px) {
+  .project-container ul {
+    font-size: 0.9rem;
+    letter-spacing: 0.03rem;
+    line-height: 1.3rem;
+  }
+
+  .skills .skill-tag {
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+  }
+
+  .skills .list ul {
+    padding-left: 2.5rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.05rem;
+    line-height: 1.5rem;
+  }
+  
+  .skills .list ul li {
+    font-weight: 350;
+  }
+
+  .skills .skill-container {
+    min-height: 12rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .project-container ul {
+    font-size: 0.8rem;
+    letter-spacing: 0.03rem;
+    line-height: 1.3rem;
+    padding-left: 1.2rem;
+    padding-right: 0.8rem;
+  }
+
+  .skills .skill-tag {
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+  }
+
+  .skills .list ul {
+    padding-left: 2rem;
+    font-size: 1rem;
+    letter-spacing: 0.05rem;
+    line-height: 1.5rem;
+  }
+  
+  .skills .list ul li {
+    font-weight: 300;
+  }
+}

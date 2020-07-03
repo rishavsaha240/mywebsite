@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block head %}
+  <title>Rishav Saha - Admin</title>
+{% endblock %}
+
+{% block body %}
+<div class="page-style">
+  <p class="page-tag">Please login</p>
+  <div class="container">
+    <form action="", method="POST">
+      <div class="form-group">
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter emailID">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" id="login-password" name="login-password" placeholder="Enter password">
+      </div>
+      <button type="submit" class="btn btn-warning">Login</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

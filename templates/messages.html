@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block head %}
+  <title>Rishav Saha - Admin</title>
+{% endblock %}
+
+{% block body %}
+<div class="page-style">
+  <p class="page-tag">Admin panel</p>
+  <a href="/logout" class="btn btn-warning">Logout</a>
+  <br><br>
+  <div class="container">
+    <p class="msg-tag">Contact form messages -- (<span>Total: {{ total }}, Unread: {{ unread }})</span></p>
+    {% if msgs|length < 1  %}
+      <h4 style = "text-align:center; color: #fff; font-weight: 350;">There are no messages</h4>
+    {% else %}
+      {% for msg in msgs %}
+        <div class="msg-container">
+          <p>Name:
+              <span class="msg-read">
+                {% if msg.read == False %}
+                <a href="/markread/{{ msg._id }}" class="btn btn-warning">Mark as read</a>
+                {% else %}
+                  <a href="/delete/{{ msg._id }}" class="ml-2 btn btn-danger">Delete</a>
+                {% endif %}
+              </span>
+              <br>
+              {{ msg.name }}
+          </p>
+          <p>Email:<br>{{ msg.email }}</p>
+          <p>Message:<br>{{ msg.message }}</p>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+
+</div>
+{% endblock %}
